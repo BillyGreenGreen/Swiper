@@ -16,6 +16,22 @@ public class ArrowCollision : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI livesText;
+    [SerializeField] private Image swipeBar;
+
+    private void Start() {
+        if(PlayerPrefs.GetString("ColourMode") == "Light"){
+            Camera.main.backgroundColor = ConvertColorTo01(255, 255, 255);
+            swipeBar.color = Color.black;
+            scoreText.color = ConvertColorTo01(0,0,0,83);
+            livesText.color = ConvertColorTo01(0,0,0,83);
+        }
+        else{
+            Camera.main.backgroundColor = ConvertColorTo01(14, 14, 14);
+            swipeBar.color = Color.white;
+            scoreText.color = ConvertColorTo01(255,255,255,200);
+            livesText.color = ConvertColorTo01(255,255,255,200);
+        }
+    }
 
     private void Update() {
         scoreText.text = score.ToString();
@@ -90,5 +106,9 @@ public class ArrowCollision : MonoBehaviour
         Destroy(arrow);
         score++;
         lives++;
+    }
+
+    private Color ConvertColorTo01 (int r, int g, int b, int a = 255){
+        return new Color(r/255.0f, g/255.0f, b/255.0f, a/255.0f);
     }
 }

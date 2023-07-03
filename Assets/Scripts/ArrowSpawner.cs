@@ -1,33 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 
 public class ArrowSpawner : MonoBehaviour
 {
-    [SerializeField] private Image swipeBar;
-    [SerializeField] private TextMeshProUGUI scoreText;
-    [SerializeField] private TextMeshProUGUI livesText;
-    Color arrowColour;
+    float secondsToWait = 1.3f;
     // Start is called before the first frame update
     void Start()
     {
         Application.targetFrameRate = 60;
-        if (PlayerPrefs.GetString("ColourMode") == "Light"){
-            arrowColour = Color.black;
-            Camera.main.backgroundColor = ConvertColorTo01(255, 255, 255);
-            swipeBar.color = Color.black;
-            scoreText.color = ConvertColorTo01(0, 0, 0, 83);
-            livesText.color = ConvertColorTo01(0, 0, 0, 83);
-        }
-        else{
-            arrowColour = Color.white;
-            swipeBar.color = Color.white;
-            Camera.main.backgroundColor = ConvertColorTo01(14, 14, 14);
-            scoreText.color = ConvertColorTo01(255, 255, 255, 83);
-            livesText.color = ConvertColorTo01(255, 255, 255, 83);
-        }
+        
         StartCoroutine(SpawnArrow());
     }
 
@@ -41,9 +23,12 @@ public class ArrowSpawner : MonoBehaviour
         while (true){
             GameObject go = Resources.Load<GameObject>("arrowPF");
             go.GetComponent<Arrow>().speed += 0.2f;
-            go.GetComponent<SpriteRenderer>().color = arrowColour;
             Instantiate(go, gameObject.transform.position, Quaternion.identity);
-            yield return new WaitForSeconds(1);
+            if (secondsToWait > 0.5){
+                secondsToWait -= 0.02f;
+            }
+            
+            yield return new WaitForSeconds(secondsToWait);
         }
     }
 

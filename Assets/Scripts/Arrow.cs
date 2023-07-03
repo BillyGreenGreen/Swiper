@@ -25,6 +25,13 @@ public class Arrow : MonoBehaviour
         rotation = rotations[rng];
         gameObject.transform.rotation = Quaternion.Euler(0,0,rotation);
 
+        if(PlayerPrefs.GetString("ColourMode") == "Light"){
+            gameObject.GetComponent<SpriteRenderer>().color = Color.black;
+        }
+        else{
+            gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+        }
+
     }
 
     // Update is called once per frame

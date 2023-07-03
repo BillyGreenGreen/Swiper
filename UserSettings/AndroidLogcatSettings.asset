@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "ec012fc5",
     "m_SelectedPackage": {
-        "deviceId": "ec012fc5",
-        "name": "com.DefaultCompany.com.unity.template.mobile2D",
-        "processId": 5125,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -37,12 +37,6 @@
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 25552,
             "exited": true
-        },
-        {
-            "deviceId": "ec012fc5",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 5125,
-            "exited": false
         }
     ],
     "m_Tags": {
