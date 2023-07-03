@@ -41,9 +41,7 @@
      <Compile Include="Assets\SwipeController\Scripts\SwipeDetectionMode.cs" />
      <Compile Include="Assets\SwipeController\Scripts\Errors.cs" />
      <Compile Include="Assets\SwipeController\Scripts\Examples\MoveOnSwipe_Vector.cs" />
-     <Compile Include="Assets\ArrowCollision.cs" />
      <Compile Include="Assets\Scripts\Arrow.cs" />
-     <Compile Include="Assets\MainMenu.cs" />
      <Compile Include="Assets\Scripts\SwipeDetection.cs" />
      <Compile Include="Assets\SwipeController\Scripts\DirectionId.cs" />
      <Compile Include="Assets\SwipeController\Scripts\Examples\MoveOnSwipe_Hexagonal.cs" />
@@ -52,6 +50,10 @@
      <Compile Include="Assets\SwipeController\Scripts\VectorToDirection.cs" />
      <Compile Include="Assets\Scripts\ArrowSpawner.cs" />
      <Compile Include="Assets\SwipeController\Scripts\DirectionPresets.cs" />
+     <Compile Include="Assets\Scripts\ArrowCollision.cs" />
+     <Compile Include="Assets\Scripts\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\ArrowSwipeAnimation.cs" />
+     <Compile Include="Assets\Scripts\Stats.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

@@ -542,6 +542,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb9b79bbee719bf4c834764df3f2dd98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  swipeBar: {fileID: 1716259698}
+  scoreText: {fileID: 71653759}
+  livesText: {fileID: 1633688363}
 --- !u!4 &899316162
 Transform:
   m_ObjectHideFlags: 0
@@ -799,7 +802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -837,7 +840,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -5.6752806}
+  m_Offset: {x: 0, y: -2.8550873}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -848,7 +851,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 199.971, y: 16.512232}
+  m_Size: {x: 199.971, y: 10.871845}
   m_EdgeRadius: 0
 --- !u!114 &1716259701
 MonoBehaviour:
@@ -859,7 +862,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1716259696}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c37fc81c80effa4c958c88fe0abc494, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e505a62d118267499845733ba8bb3c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   swipeListener: {fileID: 1132509048}

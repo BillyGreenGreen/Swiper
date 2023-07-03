@@ -48,24 +48,24 @@ public class ArrowCollision : MonoBehaviour
     private void OnSwipe(string swipe){
         if (arrow != null){
             if (swipe == "Right" && arrowRotation == 0){
-                Destroy(arrow);
-                score++;
-                lives++;
+                Swiped();
+                int totalSwipes = PlayerPrefs.GetInt("TotalSwipesRight");
+                PlayerPrefs.SetInt("TotalSwipesRight", totalSwipes += 1);
             }
             else if (swipe == "Left" && arrowRotation == 180){
-                Destroy(arrow);
-                score++;
-                lives++;
+                int totalSwipes = PlayerPrefs.GetInt("TotalSwipesLeft");
+                PlayerPrefs.SetInt("TotalSwipesLeft", totalSwipes += 1);
+                Swiped();
             }
             else if (swipe == "Up" && arrowRotation == 90){
-                Destroy(arrow);
-                score++;
-                lives++;
+                int totalSwipes = PlayerPrefs.GetInt("TotalSwipesUp");
+                PlayerPrefs.SetInt("TotalSwipesUp", totalSwipes += 1);
+                Swiped();
             }
             else if (swipe == "Down" && arrowRotation == 270){
-                Destroy(arrow);
-                score++;
-                lives++;
+                int totalSwipes = PlayerPrefs.GetInt("TotalSwipesDown");
+                PlayerPrefs.SetInt("TotalSwipesDown", totalSwipes += 1);
+                Swiped();
             }
         }
         
@@ -73,5 +73,22 @@ public class ArrowCollision : MonoBehaviour
 
     private void OnDisable(){
         swipeListener.OnSwipe.RemoveListener(OnSwipe);
+    }
+
+    private void Swiped(){
+        int totalSwipes = PlayerPrefs.GetInt("TotalSwipes");
+        PlayerPrefs.SetInt("TotalSwipes", totalSwipes += 1);
+        GameObject go = Resources.Load<GameObject>("arrowPF_Swiped");
+        go.GetComponent<ArrowSwipeAnimation>().rotation = arrowRotation;
+        if (PlayerPrefs.GetString("ColourMode") == "Light"){
+            go.GetComponent<SpriteRenderer>().color = Color.black;
+        }
+        else{
+            go.GetComponent<SpriteRenderer>().color = Color.white;
+        }
+        Instantiate(go);
+        Destroy(arrow);
+        score++;
+        lives++;
     }
 }
