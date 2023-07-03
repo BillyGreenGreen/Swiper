@@ -1,0 +1,7 @@
+#Tue Jul 04 00:02:58 BST 2023
+base.0=D\:\\Github\\Swiper\\test.apk\\launcher\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
+path.1=classes2.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=D\:\\Github\\Swiper\\test.apk\\launcher\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes2.dex

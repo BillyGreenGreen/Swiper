@@ -37,6 +37,12 @@
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 25552,
             "exited": true
+        },
+        {
+            "deviceId": "ec012fc5",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 26210,
+            "exited": false
         }
     ],
     "m_Tags": {

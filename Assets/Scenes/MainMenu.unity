@@ -405,6 +405,7 @@ GameObject:
   - component: {fileID: 524000556}
   - component: {fileID: 524000555}
   - component: {fileID: 524000558}
+  - component: {fileID: 524000559}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -500,6 +501,18 @@ MonoBehaviour:
   swipeMe: {fileID: 1315542899}
   startColor: {r: 0.49803922, g: 0.49803922, b: 0.49803922, a: 1}
   endColor: {r: 0.49803922, g: 0.49803922, b: 0.49803922, a: 0}
+--- !u!114 &524000559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524000554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfa6d5831382e9f45b7e12e541fd5f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &837752044
 GameObject:
   m_ObjectHideFlags: 0
